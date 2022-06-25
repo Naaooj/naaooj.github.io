@@ -1,0 +1,31 @@
+@import "variables";
+
+// Bootstrap variables override (see node_modules/bootstrap/scss/_variables.scss)
+$body-bg: $bg-color;
+$navbar-light-brand-color: $text-color;
+$navbar-light-brand-hover-color: $text-color;
+$body-color: #fff;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $medium-blue;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $medium-blue;
+  border-radius: 12px;
+}
+
+.highlight {
+  color: $medium-blue;
+}

@@ -1,0 +1,50 @@
+@import "../../variables";
+
+.footer {
+    position: relative;
+    margin-top: -58px;
+    background-color: $dark-blue;
+    flex-shrink: 0;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 1em;
+    color: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer-icons {
+    text-align: right;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0;
+
+    .social-icons {
+        display: inline-block;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .footer-copyright,
+    .footer-icons {
+        text-align: left;
+    }
+
+    .footer-icons {
+        .social-icons {
+            display: inline-block;
+            padding-right: 15px;
+            padding-left: 0;
+        }
+    }
+}

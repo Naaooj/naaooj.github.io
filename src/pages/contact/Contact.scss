@@ -1,0 +1,66 @@
+@import "../../variables";
+
+.contact-section {
+    height: auto;
+    min-height: calc(100vh - 140px);
+    padding-bottom: 58px;
+    overflow: auto;
+
+    .contact-header,
+    .contact-social {
+        margin-top: 40px;
+    }
+
+    .contact-icons {
+        display: inline-block;
+        position: relative;
+        padding-left: 0;
+    }
+
+    .social-icons {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .social-icons:not(:first-child) {
+        padding-left: 15px;
+    }
+
+    .social-icon {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 2em;
+        color: $medium-blue;
+        background: rgba(255, 255, 255, 0.972);
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    
+    .social-icon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $medium-blue;
+        transition: 0.5s;
+        transform: scale(1);
+        z-index: -1;
+    }
+    
+    .social-icon:hover {
+        color: $dark-blue;
+        box-shadow: 0 0 10px #ffffff;
+    }
+}
+
+@media (min-width: 767px) {
+    .contact-section {
+        min-height: calc(100vh - 71px);
+    }
+}

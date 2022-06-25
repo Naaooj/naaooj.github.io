@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.loading-container {
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999999;
+    background-color: $bg-color;
+}
+
+.loading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-background {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: $medium-blue;
+    -webkit-mask: url(../../assets/puff.svg) no-repeat;
+    mask: url(../../assets/puff.svg) no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
