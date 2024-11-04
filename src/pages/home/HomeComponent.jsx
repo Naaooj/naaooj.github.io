@@ -5,7 +5,19 @@ import './Home.scss';
 import TypeWriterComponent from "./TypeWriterComponent";
 
 class HomeComponent extends Component {
+    
     render() {
+        const calculateAge = () => {
+            const birthDate = new Date('1985-03-21');
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        };
+
         return (
             <Container fluid className="home-section" id="home">
                 <Container>
@@ -40,11 +52,11 @@ class HomeComponent extends Component {
                             LET ME <span className="highlight"> INTRODUCE </span> MYSELF
                             </h1>
                             <p className="">
-                            I am 37 years old and I started programming at the age of 14 with my calculator. 
+                            I am {calculateAge()} years old and I started programming at the age of 14 with my calculator. 
                             <br />
                             Since then, I've been practicing different languages and technologies until I got graduated in 2009.
                             <br />
-                            Over the past 13 years, I've been focusing on <span className="highlight">full stack development</span>, specialising myself with Java, Spring ang Angular.
+                            Over the past 13 years, I've been focusing on <span className="highlight">full stack development</span>, specialising myself with Java, Spring and Angular.
                             </p>
                         </Col>
                     </Row>
